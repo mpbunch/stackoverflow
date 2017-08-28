@@ -1,0 +1,32 @@
+<html ng-app="test">
+<head>
+    <title>LinkedIn Prep</title>
+    <link rel="stylesheet" type="text/css" href="css/stylesheets/screen.css"/>
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+</head>
+<body ng-cloak ng-controller="home">
+<!--
+    <div class="name">{{name}}</div>
+    <div class="email">{{email}}</div>
+    <div class="image"><img ng-src="{{image}}"/></div>
+    <button linked-in type="button">LinkedIn Login</button>
+-->
+    <div class="container">
+        <div class="row" ng-repeat="item in items">
+            <div class="col-xs-12">
+                <div class="title"><a href="{{item[link]}}"><span ng-bind-html="trustAsHtml(item['title'])"></span></a></div>
+            </div>
+            <div class="col-xs-12">
+                <div class="question" ng-bind-html="trustAsHtml(item['body'])"></div>
+            </div>
+            <div class="col-xs-12">
+                <ul><li ng-repeat="tag in item['tags']">{{tag}}</li></ul>
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+<!--    <script src="node_modules/angularjs-social-login/angularjs-social-login.js"></script>-->
+    <script src="js/app.js"></script>
+</body>
+</html>

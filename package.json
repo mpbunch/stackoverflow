@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-route": "^1.6.5",
+    "angular-sanitize": "^1.6.6",
+    "angularjs-social-login": "^2.6.1",
+    "bootstrap": "^3.3.7"
+  }
+}
